@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.infy.lbsprototype.model.Customer" table="customer" >
+  		<id name="customerId" type="string">
+            <column name="customerId" length="20" not-null="true" />
+        </id>
+        <property name="channelInfo" type="string">
+            <column name="channelInfo" length="30" not-null="true" />
+        </property>      
+     </class>
+</hibernate-mapping>

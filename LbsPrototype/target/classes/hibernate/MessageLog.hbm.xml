@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.infy.lbsprototype.model.MessageLog" table="messagelog" >
+  		<composite-id>
+  			<key-property name="refReqId" type="java.lang.Long" column="refReqId"/>
+    		<key-property name="customerId" type="string" column="customerId"/>
+    		<key-property name="msgid" type="java.lang.Long" column="msgid"/>
+		</composite-id>
+		 
+        <property name="title" type="string">
+            <column name="title" length="100" not-null="true" />
+        </property>
+        <property name="notificationTime" type="java.sql.Timestamp">
+            <column name="notificationTime" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

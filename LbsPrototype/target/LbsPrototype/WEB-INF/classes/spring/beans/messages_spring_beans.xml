@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:component-scan base-package="com.infy.lbsprototype.restwebservice" />
+
+	<!-- Stock business object -->
+   <bean id="lbsService" class="com.infy.lbsprototype.service.Impl.LbsServiceImpl" >
+   		<property name="lbsDao" ref="lbsDao" />
+   </bean>
+ 
+   <!-- Stock Data Access Object -->
+   <bean id="lbsDao" class="com.infy.lbsprototype.dao.Impl.LbsDaoImpl" >
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
+   
+    		
+</beans>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.infy.lbsprototype.model.CustomerPreferenceMapping" table="customerpreferencemapping" >
+        <composite-id>
+    		<key-property name="customerId" type="string" column="customerId"/>
+    		<key-property name="preference" type="string" column="preference"/>
+		</composite-id>
+     </class>
+</hibernate-mapping>

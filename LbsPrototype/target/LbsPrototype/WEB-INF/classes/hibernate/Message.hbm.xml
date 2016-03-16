@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.infy.lbsprototype.model.Message" table="messages" >
+  		<id name="msgid" type="java.lang.Long">
+            <column name="msgid" />
+        </id>
+        <property name="moveType" type="string">
+            <column name="moveTypeID" length="10" not-null="true" />
+        </property>
+        <property name="categoryId" type="string">
+            <column name="categoryId" length="20" not-null="true" />
+        </property>
+        
+        <property name="topicId" type="string">
+            <column name="topicId" length="20" not-null="true"  />
+        </property>
+        
+        <property name="contentTypeId" type="string">
+            <column name="contentTypeId" length="20" not-null="true" />
+        </property>
+        
+        <property name="geoLocationType" type="string">
+            <column name="geoLocationTypeID" length="20" not-null="true" />
+        </property>
+        
+        <property name="geolocation" type="string">
+            <column name="geolocation" length="20" not-null="true" />
+        </property>
+        
+         <property name="title" type="string">
+            <column name="title" length="20" not-null="true" />
+        </property>
+        
+        <property name="message" type="string">
+            <column name="message" length="5000" not-null="true" />
+        </property>
+        
+        <property name="activeYN" type="string">
+            <column name="activeYN" length="20" not-null="true" />
+        </property>
+        <property name="activeFrom" type="timestamp">
+            <column name="activeFrom" length="20" not-null="true" />
+        </property>
+        <property name="activeTo" type="timestamp">
+            <column name="activeTo" length="20" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.infy.lbsprototype.model.Notification" table="notification" >
+  		<id name="requestId" column="requestId" type="java.lang.Long">
+  			<generator class="increment" ></generator>
+        </id>
+        <property name="customerId" type="string">
+            <column name="customerId" length="20" not-null="true" />
+        </property>
+        <property name="regionType" type="string">
+            <column name="regionType" length="20" not-null="true" />
+        </property>
+        
+        <property name="regionCode" type="string">
+            <column name="regionCode" length="20" not-null="true"  />
+        </property>
+        
+        <property name="movementType" type="string">
+            <column name="movementType" length="10" not-null="true" />
+        </property>
+        
+        <property name="inputTime" type="string">
+            <column name="inputTime" length="20" not-null="true" />
+        </property>
+        
+        <property name="sendNotification" type="string">
+            <column name="sendNotification" length="20" not-null="true" />
+        </property>
+        
+         <property name="lat" type="string">
+            <column name="lat" length="10" not-null="true" />
+        </property>
+        
+        <property name="lon" type="string">
+            <column name="lon" length="100" not-null="true" />
+        </property>
+        
+        <property name="city" type="string">
+            <column name="city" length="100" not-null="false" />
+        </property>
+        <property name="town" type="string">
+            <column name="town" length="100" not-null="false" />
+        </property>
+        <property name="country" type="string">
+            <column name="country" length="100" not-null="false" />
+        </property>
+        <property name="notificationTime" type="java.sql.Timestamp">
+            <column name="notificationTime" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
